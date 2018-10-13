@@ -1,12 +1,12 @@
 fileFormatVersion: 2
 guid: 2f3b174d83018d04885316e8867622f7
-timeCreated: 1539237668
+timeCreated: 1539391053
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: North_0
-    21300002: Char_1
-    21300004: Char_2
+    21300002: North_1
+    21300004: North_2
     21300006: Char_3
     21300008: Char_4
     21300010: Char_5
@@ -25,8 +25,8 @@ TextureImporter:
     21300036: Char_18
     21300038: Char_19
     21300040: South_0
-    21300042: Char_21
-    21300044: Char_22
+    21300042: South_1
+    21300044: South_2
     21300046: Char_23
     21300048: Char_24
     21300050: Char_25
@@ -48,8 +48,8 @@ TextureImporter:
     21300082: Char_41
     21300084: Char_42
     21300086: West_0
-    21300088: Char_44
-    21300090: Char_45
+    21300088: West_1
+    21300090: West_2
     21300092: Char_46
     21300094: Char_47
     21300096: Char_48
@@ -70,8 +70,8 @@ TextureImporter:
     21300126: Char_63
     21300128: Char_64
     21300130: east_0
-    21300132: Char_66
-    21300134: Char_67
+    21300132: East_1
+    21300134: East_2
     21300136: Char_68
     21300138: Char_69
     21300140: Char_70
@@ -144,6 +144,8 @@ TextureImporter:
     21300274: South_0
     21300276: West_0
     21300278: East_0
+    21300280: Char_0
+    21300282: Char_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -186,7 +188,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 25
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -197,6 +199,15 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -223,7 +234,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_1
+      name: North_1
       rect:
         serializedVersion: 2
         x: 32
@@ -237,7 +248,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_2
+      name: North_2
       rect:
         serializedVersion: 2
         x: 64
@@ -503,7 +514,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_21
+      name: South_1
       rect:
         serializedVersion: 2
         x: 32
@@ -517,7 +528,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_22
+      name: South_2
       rect:
         serializedVersion: 2
         x: 64
@@ -825,7 +836,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_44
+      name: West_1
       rect:
         serializedVersion: 2
         x: 32
@@ -839,7 +850,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_45
+      name: West_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1133,7 +1144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_66
+      name: East_1
       rect:
         serializedVersion: 2
         x: 32
@@ -1147,7 +1158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Char_67
+      name: East_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1794,12 +1805,12 @@ TextureImporter:
       name: Char_113
       rect:
         serializedVersion: 2
-        x: 96
-        y: 53
+        x: 102
+        y: 33
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8976338, y: -0.29526794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1808,12 +1819,12 @@ TextureImporter:
       name: Char_114
       rect:
         serializedVersion: 2
-        x: 128
-        y: 53
+        x: 130
+        y: 33
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4573958}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1878,8 +1889,8 @@ TextureImporter:
       name: Char_119
       rect:
         serializedVersion: 2
-        x: 288
-        y: 53
+        x: 285
+        y: 42
         width: 32
         height: 32
       alignment: 0
@@ -1906,8 +1917,8 @@ TextureImporter:
       name: Char_121
       rect:
         serializedVersion: 2
-        x: 352
-        y: 53
+        x: 365
+        y: 49
         width: 32
         height: 32
       alignment: 0
@@ -1976,8 +1987,8 @@ TextureImporter:
       name: Char_126
       rect:
         serializedVersion: 2
-        x: 96
-        y: 21
+        x: 106
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -1990,8 +2001,8 @@ TextureImporter:
       name: Char_127
       rect:
         serializedVersion: 2
-        x: 128
-        y: 21
+        x: 132
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -2004,12 +2015,12 @@ TextureImporter:
       name: Char_128
       rect:
         serializedVersion: 2
-        x: 160
-        y: 21
+        x: 161
+        y: 2
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51420116, y: -0.08225}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2019,7 +2030,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 21
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -2106,6 +2117,34 @@ TextureImporter:
         y: 21
         width: 32
         height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Char_0
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 35
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Char_1
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 19
+        width: 45
+        height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -661,6 +661,11 @@ Prefab:
       propertyPath: m_Name
       value: Long_Grass (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 212864896721715274, guid: f7238307bf7991c468efe4c3584246e3,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7238307bf7991c468efe4c3584246e3, type: 2}
   m_IsPrefabParent: 0
@@ -2544,6 +2549,7 @@ GameObject:
   - component: {fileID: 638415033}
   - component: {fileID: 638415032}
   - component: {fileID: 638415034}
+  - component: {fileID: 638415035}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2590,7 +2596,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2620,11 +2626,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d552896f5ac16c4e9b5d57b3787ea0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  northSprite: {fileID: 21300000, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
-  eastSprite: {fileID: 21300278, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
-  southSprite: {fileID: 21300040, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
-  westSprite: {fileID: 21300086, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
-  walkSpeed: 3
+  moveSpeed: 3
+--- !u!95 &638415035
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638415031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e41c68f450ab7c94f8a93469e61b4bcb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &673645112
 Prefab:
   m_ObjectHideFlags: 0
