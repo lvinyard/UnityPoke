@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
-    /*
+    
     Direction currentDir;
     Vector2 input;
     bool isMoving = false;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite westSprite;
 
     public float walkSpeed = 3f;
-    */
+    
 
 
     private void Start()
@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
-        /*
+        */
         if (!isMoving)
         {
             input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -95,15 +96,18 @@ public class PlayerMovement : MonoBehaviour
                         break;
                 }
 
+                anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+                anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+
                 StartCoroutine(Move(transform));
             }
         }
-        */
+        
 
     }
-}
 
-    /*
+
+    
     public IEnumerator Move(Transform entity)
     {
         isMoving = true;
@@ -132,4 +136,3 @@ enum Direction
     West
 }
 
-*/
