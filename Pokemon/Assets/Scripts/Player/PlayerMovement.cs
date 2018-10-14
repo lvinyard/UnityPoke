@@ -9,24 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator anim;
 
-    
-    Direction currentDir;
-    Vector2 input;
-    bool isMoving = false;
-    Vector3 startPos;
-    Vector3 endPos;
-    float t;
-
-    public Sprite northSprite;
-
-    public Sprite eastSprite;
-
-    public Sprite southSprite;
-
-    public Sprite westSprite;
-
-    public float walkSpeed = 3f;
-    
+    private bool isMoving;
+    private Vector2 lastMove;
 
 
     private void Start()
@@ -37,102 +21,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        isMoving = false;
+        
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
+            isMoving = true;
+            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
         }
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+        else if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
         {
             transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
-        }
-
-        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
-        */
-        if (!isMoving)
-        {
-            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
-                input.y = 0;
-            else
-                input.x = 0;
-
-            if (input != Vector2.zero)
-            {
-                if(input.x < 0)
-                {
-                    currentDir = Direction.West;
-                }
-                if(input.x > 0)
-                {
-                    currentDir = Direction.East;
-                }
-                if(input.y < 0)
-                {
-                    currentDir = Direction.South;
-                }
-                if(input.y > 0)
-                {
-                    currentDir = Direction.North;
-                }
-
-                switch(currentDir)
-                {
-                    case Direction.North:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = northSprite;
-                        break;
-
-                    case Direction.East:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = eastSprite;
-                        break;
-
-                    case Direction.South:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = southSprite;
-                        break;
-
-                    case Direction.West:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = westSprite;
-                        break;
-                }
-
-                anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-                anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
-
-                StartCoroutine(Move(transform));
-            }
+            isMoving = true;
+            lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
         }
         
-
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+        anim.SetBool("isMoving", isMoving);
+        anim.SetFloat("LastMoveX", lastMove.x);
+        anim.SetFloat("LastMoveY", lastMove.y);
     }
 
-
-    
-    public IEnumerator Move(Transform entity)
-    {
-        isMoving = true;
-        startPos = entity.position;
-        t = 0;
-
-        endPos = new Vector3(startPos.x + System.Math.Sign(input.x), startPos.y + System.Math.Sign(input.y), startPos.z);
-
-        while (t < 1f)
-        {
-            t += Time.deltaTime * walkSpeed;
-            entity.position = Vector3.Lerp(startPos, endPos, t);
-            yield return null;
-        }
-
-        isMoving = false;
-        yield return 0;
-    }
-}
-
-enum Direction
-{
-    North,
-    East,
-    South,
-    West
 }
 
