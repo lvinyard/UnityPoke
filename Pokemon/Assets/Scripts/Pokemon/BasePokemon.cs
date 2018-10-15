@@ -5,29 +5,49 @@ using UnityEngine.UI;
 
 public class BasePokemon : MonoBehaviour {
 
-    public string Name;
+    public string Pname;
     public Sprite image;
     public BiomeList biomeFound;
     public PokemonType type;
-    public float baseHP;
-    private float maxHP;
-    public float baseAtk;
-    public float maxAtk;
-    public float baseDef;
-    public float maxDef;
-    public float speed;
+    public Rarity rarity;
+    public int HP;
+    private int maxHP;
+    public Stat AttackStat;
+    public Stat DefStat;
+
+    public PokemonStats pokemonStats;
+
+    public bool canEvolve;
+    public PokemonEvolution evolveTo;
 
     private int level;
-
+    
 	// Use this for initialization
 	void Start () {
-		
+        maxHP = HP;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+    public void AddMember(BasePokemon bp)
+    {
+        this.Pname = bp.Pname;
+        this.image = bp.image;
+        this.biomeFound = bp.biomeFound;
+        this.type = bp.type;
+        this.rarity = bp.rarity;
+        this.HP = bp.HP;
+        this.maxHP = bp.maxHP;
+        this.AttackStat = bp.AttackStat;
+        this.DefStat = bp.DefStat;
+        this.pokemonStats = bp.pokemonStats;
+        this.canEvolve = bp.canEvolve;
+        this.evolveTo = bp.evolveTo;
+        this.level = bp.level;
+    }
+
 }
 
 public enum Rarity
@@ -52,5 +72,26 @@ public enum PokemonType
     Electric,
     Psychic,
     Dark,
-    Dragon
+    Dragon,
+    Fighting,
+    Normal
+}
+
+[System.SerializableAttribute]
+
+public class PokemonEvolution
+    {
+        public BasePokemon nextEvolution;
+        public int levelUpLevel;
+    }
+
+[System.Serializable]
+
+public class PokemonStats
+{
+    public int AttackStat;
+    public int DefenseStat;
+    public int SpAttackStat;
+    public int spDefenseStat;
+    public int EvasionStat;
 }

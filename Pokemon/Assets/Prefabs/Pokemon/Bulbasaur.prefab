@@ -9,82 +9,77 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1810592865647412}
+  m_RootGameObject: {fileID: 1743515752121658}
   m_IsPrefabParent: 1
---- !u!1 &1810592865647412
+--- !u!1 &1743515752121658
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4436938210620154}
-  - component: {fileID: 212864896721715274}
-  - component: {fileID: 61785182212022582}
-  - component: {fileID: 114431982810497268}
+  - component: {fileID: 4990778055582914}
+  - component: {fileID: 212832881233665130}
+  - component: {fileID: 114471671818081238}
   m_Layer: 0
-  m_Name: Long_Grass
+  m_Name: Bulbasaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4436938210620154
+--- !u!4 &4990778055582914
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810592865647412}
+  m_GameObject: {fileID: 1743515752121658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1600003, y: -2.6000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.6858375, y: -0.36695015, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61785182212022582
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810592865647412}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &114431982810497268
+--- !u!114 &114471671818081238
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810592865647412}
+  m_GameObject: {fileID: 1743515752121658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dce7fd74c096fb41823c7f43cb4a896, type: 3}
+  m_Script: {fileID: 11500000, guid: 11bea6fbf70b85844aafe03fbb933cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassType: 0
---- !u!212 &212864896721715274
+  Pname: BulbaSaur
+  image: {fileID: 21300000, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  biomeFound: 0
+  type: 6
+  rarity: 0
+  HP: 45
+  AttackStat:
+    minimum: 0
+    maximum: 0
+  DefStat:
+    minimum: 0
+    maximum: 0
+  pokemonStats:
+    AttackStat: 49
+    DefenseStat: 49
+    SpAttackStat: 65
+    spDefenseStat: 65
+    EvasionStat: 0
+  canEvolve: 0
+  evolveTo:
+    nextEvolution: {fileID: 0}
+    levelUpLevel: 0
+--- !u!212 &212832881233665130
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810592865647412}
+  m_GameObject: {fileID: 1743515752121658}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -112,8 +107,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300120, guid: fe3b1e453b9d88047b7d779f8a2ba8c1, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
